@@ -7,7 +7,9 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 
 # Diretório para salvar os PDFs dos convites
-CONVITE_DIR = "/home/ubuntu/convite_qrcode/dados/convites"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+CONVITE_DIR = os.path.join(BASE_DIR, "dados", "convites")
+
 
 def gerar_convite_pdf(evento, convidado, caminho_qrcode, nome_arquivo_base):
     """Gera um convite em PDF com dados do evento, convidado e QR Code.
@@ -147,7 +149,7 @@ if __name__ == "__main__":
     # 2. Gerar um QR Code de teste primeiro
     print("\nGerando QR Code de teste...")
     # Garante que o diretório de dados exista para o qrcode_service
-    os.makedirs("/home/ubuntu/convite_qrcode/dados/qrcodes", exist_ok=True)
+    os.makedirs("/convite_qrcode/dados/qrcodes", exist_ok=True)
     caminho_qr_teste = gerar_qrcode(dados_qr, nome_base, tipo="dados")
 
     # 3. Gerar o PDF do convite

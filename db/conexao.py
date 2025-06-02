@@ -4,7 +4,7 @@ import os
 
 # Define o nome do arquivo do banco de dados SQLite
 DB_NAME = "convites_db.sqlite"
-DB_PATH = os.path.join("/home/ubuntu/convite_qrcode/dados", DB_NAME)
+DB_PATH = os.path.join("/db", DB_NAME)
 
 def criar_conexao():
     """Cria e retorna uma conexão com o banco de dados SQLite."""

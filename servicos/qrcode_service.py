@@ -3,7 +3,9 @@ import os
 from PIL import Image
 
 # Diretório para salvar os QR Codes
-QRCODE_DIR = "/home/ubuntu/convite_qrcode/dados/qrcodes"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+QRCODE_DIR = os.path.join(BASE_DIR, "dados", "qrcodes")
+
 
 def gerar_qrcode(dados, nome_arquivo_base, tipo="dados"):
     """Gera um QR Code e salva como imagem PNG.

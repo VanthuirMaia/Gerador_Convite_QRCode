@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import sys
 from datetime import datetime
@@ -49,8 +48,8 @@ def obter_input(prompt, tipo=str, obrigatorio=True, padrao=None):
                 return int(valor_str)
             elif tipo == float:
                 return float(valor_str)
-            elif tipo == "data": # Formato YYYY-MM-DD
-                return datetime.strptime(valor_str, "%Y-%m-%d").date()
+            elif tipo == "data": # Formato DD-MM-AAAA
+                return datetime.strptime(valor_str, "%d-%m-%Y").date()
             elif tipo == "hora": # Formato HH:MM
                 return datetime.strptime(valor_str, "%H:%M").time()
             elif tipo == "email":
@@ -73,7 +72,7 @@ def criar_novo_evento():
     exibir_cabecalho("Criar Novo Evento")
     nome = obter_input("Nome do Evento: ")
     local = obter_input("Local: ", obrigatorio=False)
-    data = obter_input("Data (YYYY-MM-DD): ", tipo="data", obrigatorio=False)
+    data = obter_input("Data (DD-MM-YYYY): ", tipo="data", obrigatorio=False)
     horario = obter_input("Horário (HH:MM): ", tipo="hora", obrigatorio=False)
     descricao = obter_input("Descrição: ", obrigatorio=False)
 
@@ -467,3 +466,4 @@ if __name__ == "__main__":
     pausar("Pressione Enter para iniciar a aplicação...")
     menu_principal()
 
+# Fim do arquivo main.py
