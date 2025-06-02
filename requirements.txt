@@ -1,0 +1,4 @@
+qrcode[pil]
+reportlab
+mysql-connector-python # Comentado para usar SQLite por padrão
+

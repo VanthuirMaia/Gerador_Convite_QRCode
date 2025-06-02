@@ -65,12 +65,14 @@ O sistema está configurado para usar SQLite por padrão, armazenando o banco de
 O sistema apresenta um menu interativo no terminal com as seguintes opções:
 
 1. **Menu de Eventos**
+
    - Criar Novo Evento
    - Listar Todos os Eventos
    - Editar Evento Existente
    - Excluir Evento Existente
 
 2. **Menu de Convidados**
+
    - Criar Novo Convidado (e gerar convite)
    - Listar Convidados por Evento
    - Listar Todos os Convidados
@@ -92,4 +94,12 @@ O sistema apresenta um menu interativo no terminal com as seguintes opções:
 - A estrutura foi projetada para permitir fácil troca entre SQLite e MySQL
 - Os convites gerados incluem nome do evento, data, horário, local, nome do convidado e QR Code
 - O QR Code pode conter dados do evento/convidado ou uma URL externa (ex: sistema de confirmação)
+
 # Gerador_Convite_QRCode
+
+## Este projeto foi idealizado e desenvolvido por:
+
+Vanthuir Maia
+📧 vanthuir.dev@gmail.com
+
+Fique à vontade para entrar em contato para sugestões, melhorias ou colaborações futuras.
